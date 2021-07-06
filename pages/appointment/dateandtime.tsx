@@ -6,7 +6,7 @@ import { patientDateAndTime } from '../../src/store/actions/patientAction';
 import { useRouter } from 'next/router';
 import DateAndTime from '../../src/components/DateAndTime';
 
-const dateandtime = ({ doctorId }: { doctorId: string }) => {
+const Dateandtime = ({ doctorId }: { doctorId: string }) => {
 	const router = useRouter();
 	useEffect(() => {
 		if (!doctorId) {
@@ -36,4 +36,4 @@ const mapStateToProps = (state: any) => {
 	};
 };
 
-export default connect(mapStateToProps, { patientDateAndTime })(dateandtime);
+export default connect(mapStateToProps, { patientDateAndTime })(Dateandtime);

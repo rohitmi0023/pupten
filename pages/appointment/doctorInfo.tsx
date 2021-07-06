@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { useRouter } from 'next/router';
 import DoctorInfo from '../../src/components/DoctorInformation/DoctorInfo';
 
-const appointment = ({ doctorId }: { doctorId: string }) => {
+const DoctorInfoPage = ({ doctorId }: { doctorId: string }) => {
 	const router = useRouter();
 	useEffect(() => {
 		if (!doctorId) {
@@ -33,4 +33,4 @@ const mapStateToProps = (state: any) => {
 	};
 };
 
-export default connect(mapStateToProps)(appointment);
+export default connect(mapStateToProps)(DoctorInfoPage);

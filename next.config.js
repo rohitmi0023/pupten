@@ -1,3 +1,11 @@
 module.exports = {
-  reactStrictMode: true,
-}
+	reactStrictMode: true,
+	module: {
+		loaders: [
+			{
+				test: /\.json$/,
+				loader: 'json-loader',
+			},
+		],
+	},
+};
